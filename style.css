@@ -174,7 +174,7 @@ a{
     width: 100%;
     color: black;
     padding: 20px 20px;
-    background: whitesmoke;
+    background: #fff;
 }
 
 .downCon a{
@@ -190,4 +190,18 @@ a{
 
 .conAbt{
     background: none;
+}
+
+@media screen and (max-width: 600px) {
+    .container1 {
+        padding-left: 83px;
+    }
+    .headings{
+        padding-left: 160px;
+    }
+
+    .downContain{
+        display: flex;
+        gap: -50px;
+    }
 }
