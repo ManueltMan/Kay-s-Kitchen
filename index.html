@@ -1,230 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmanuel Bada | Portfolio 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papE+8+aX6JZg+Yb8/7xF+5n0lD1P5+z6mRk+6A4O7pJYHC6oHJ3ZcN+2d6H0Q0E27CwBr6xtK5dOV7JZ8qJig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js" defer></script>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kay's Kitchen | Homepage</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header class="header">
-  <div class="container flex-between">
-    <a href="#" class="logo">Bada<span>Em</span></a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <nav class="nav-bar">
-      <ul class="navbar-list">
-        <li><a href="#hero" class="navbar-link">Home</a></li>
-        <li><a href="#about" class="navbar-link">About</a></li>
-        <li><a href="#skills" class="navbar-link">Skills</a></li>
-        <li><a href="#projects" class="navbar-link">Projects</a></li>
-        <li><a href="#contact" class="navbar-link">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
 
-
-
-  
-  <main>
-    <section class="hero" id="hero">
-      <img src="Bada shot.JPG" alt="Emmanuel Bada" class="hero-banner">
-      <div class="hero-content">
-        <h1 class="hero-title">Hi, I'm Emmanuel Bada</h1>
-        <p class="section-text">A Frontend developer creating interactive and responsive web experiences.</p>
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-      </div>
-    </section>
+<nav class="nav-bar">
+  <div class="nav-container">
+   
+    <h2 class="logo">Kay's <span>Kitchen</span></h2>
 
    
-    <section class="about section fade-in" id="about">
-      <div class="about-banner">
-        <img src="Bada shot.JPG" alt="About Me">
-      </div>
-      <div class="about-content">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-text">I specialize in building high-quality web applications with modern tools and frameworks. I am passionate about design, performance, and creating memorable user experiences.</p>
-        <div class="btn-group">
-          <a href="#contact" class="btn btn-primary">Hire Me</a>
-          <a href="assets/bada.resume (2) .pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+    <div class="nav-links">
+     
+      <a href="index.html"  class="desktop-only">Home</a>
+
+      
+      <div class="dropdown desktop-only">
+        <a href="#" class="drop-btn">Menu ▾</a>
+        <div class="dropdown-content">
+          <a href="#food">Food</a>
+          <a href="#snacks">Snacks</a>
+          <a href="#drinks">Drinks</a>
         </div>
       </div>
-    </section>
+
+    
+      <a href="index copy 2.html">About</a>
+
+     
+      <a href="tel:09019067034" class="btn-call desktop-only">Call Us</a>
+    </div>
+  </div>
+</nav>
+
+
+
 
    
-    <section class="skills section fade-in" id="skills">
-      <h2 class="section-title">Skills</h2>
-      <p class="section-text">
-    I have experience working with modern web technologies and tools that help me build clean, responsive, and efficient websites.  
-    These are some of the core skills I use to bring ideas to life on the web.
-  </p>
-      <div class="skills-box">
-          <div class="skill-card">
-              <img src="html-logo.png" alt="HTML5">
-              <span>HTML5</span>
-          </div>
-          <div class="skill-card">
-              <img src="css-logo.png" alt="CSS3">
-              <span>CSS3</span>
-          </div>
-          <div class="skill-card">
-              <img src="Javascript.webp" alt="JavaScript">
-              <span>JavaScript</span>
-          </div>
-          <div class="skill-card">
-              <img src="github.png" alt="GitHub">
-              <span>GitHub</span>
-          </div>
-          <div class="skill-card">
-              <img src="vscode.png" alt="VS Code">
-              <span>VS Code</span>
-          </div>
+
+
+<section class="hero">
+  <div class="hero-slider">
+    <div class="slide active">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Welcome to Our Restaurant</h1>
+          <p>Delicious meals crafted with love.</p>
+          
+        </div>
+        <div class="hero-img">
+          <img src="Jollof-rice-and-chicken.png" alt="Delicious food">
+        </div>
       </div>
-
-    </section>
-
-    
-    <section class="project section fade-in" id="projects">
-      <h2 class="section-title">Projects</h2>
-      <ul class="project-list">
-        <li class="project-card">
-          <a href="https://ethernsbooks-7v2f.vercel.app"><img src="Screenshot (80).png" alt="Project 2"></a>
-          <div class="card-content">
-            <h3 class="card-title">Demo Ticket Booking Website</h3>
-            <time class="publish-date">2024</time>
-          </div>
-        </li>
-
-        <li class="project-card">
-          <a href="https://tradepto.vercel.app"><img src="trade.png" alt="Project 2"></a>
-          <div class="card-content">
-            <h3 class="card-title">Crypto Dashboard</h3>
-            <time class="publish-date">2023</time>
-          </div>
-        </li>
-        
-        <li class="project-card">
-          <a href="https://manuelt-portfolio.vercel.app"><img src="Screenshot (82).png" alt="Project 2"></a>
-          <div class="card-content">
-            <h3 class="card-title">Portfolio Website</h3>
-            <time class="publish-date">2023</time>
-          </div>
-        </li>
-        <li class="project-card">
-          <a href="https://kays-kitchen.vercel.app"><img src="Screenshot (94).png" alt="Project 2"></a>
-          <div class="card-content">
-            <h3 class="card-title">Resturant Website</h3>
-            <time class="publish-date">2023</time>
-          </div>
-        </li>
-        
-        <li class="project-card">
-          <a href="https://bim-store.vercel.app/"><img src="Screenshot (88).png" alt="Project 2"></a>
-          <div class="card-content">
-            <h3 class="card-title">Ecommerce Dashboard</h3>
-            <time class="publish-date">2023</time>
-          </div>
-        </li>
-
-        <li class="project-card">
-          <a href="#"><img src="Screenshot (70).png" alt="Project 1"></a>
-          <div class="card-content">
-            <h3 class="card-title">Hotel Management Website</h3>
-            <time class="publish-date">2023</time>
-          </div>
-        </li>
-      </ul>
-    
-      <a href="#"><p>See more...</p></a>
-    </section>
-
-    <section class="contact section fade-in" id="contact">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="contact-socials">
-          <a href="https://wa.me/2349019067034" target="_blank">
-            <img src="whatsapp-logo-background-29.png" alt="WhatsApp">
-          </a>
-          <a href="https://www.instagram.com/nuel__3?igsh=MWJhdXN0dW55eWxpYg%3D%3D&utm_source=qr" target="_blank">
-            <img src="instagram-icon-logo-free-png.png" alt="Instagram">
-          </a>
-          <a href="https://www.linkedin.com/in/emmanuel-bada-90594b359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">
-            <img src="Linkedin-Free-PNG-Image.png" alt="LinkedIn">
-          </a>
-      </div>
-      
-      <form class="contact-form" action="https://formspree.io/f/mwpnknzq" method="POST">
-            <div class="input-wrapper">
-               <input type="text" name="name" placeholder="Your Name" required class="input-field">
-            </div>
-            <div class="input-wrapper">
-               <input type="email" name="email" placeholder="Your Email" required class="input-field">
-            </div>
-            <div class="input-wrapper">
-               <textarea name="message" placeholder="Your Message" required class="input-field"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-  
-              <p id="form-message" style="margin-top:10px; font-size:14px;"></p>
-      </form>
-
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container flex-between">
-      <div class="logo">Bada<span>Em</span></div>
-      <p class="copyright">&copy; 2025 Emmanuel Bada. All rights reserved.</p>
     </div>
-  </footer>
 
-  <script>
-  const sections = document.querySelectorAll('.fade-in');
+    <div class="slide">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Fresh & Healthy</h1>
+          <p>Snacks, Drinks, and Meals for everyone.</p>
+          
+        </div>
+        <div class="hero-img">
+          <img src="PIC (2).png" alt="Fresh and healthy">
+        </div>
+      </div>
+    </div>
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
+    <div class="slide">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Family Friendly</h1>
+          <p>Bring your loved ones for a great time.</p>
+          
+        </div>
+        <div class="hero-img">
+          <img src="PIC (5).png" alt="Family friendly dining">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  sections.forEach(section => observer.observe(section));
 
-  const form = document.querySelector(".contact-form");
-  const messageEl = document.getElementById("form-message");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
+<section id="food" class="menu"> 
+  <h2 class="section-title fade-in">Dishes</h2>
+  <div class="menu-grid">
+    <div class="card fade-in delay-1">
+      <img src="Jollof-rice-and-chicken.png" alt="food" />
+      <h3>Jollof Rice</h3>
+      <p>NGN 2500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="PIC (5).png" alt="food" />
+      <h3>Pasta Sauce</h3>
+      <p>NGN 2500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="fried-rice-with-ai-generated-free-png.webp" alt="food" />
+      <h3>FriedRice</h3>
+      <p>NGN 2500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="PIC (1).png" alt="food" />
+      <h3>Poundo yam &  Egusi</h3>
+      <p>NGN 2500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="—Pngtree—italian chicken pasta_4992938.png" alt="food" />
+      <h3>Italian Pasta</h3>
+      <p>NGN 2500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="food (3).png" alt="food" />
+      <h3>Ofada Rice</h3>
+      <p>NGN 2300</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+  </div>
+</section>
 
-    messageEl.textContent = "⏳ Sending...";
-    messageEl.style.color = "#555";
+<section id="snacks" class="menu">
+  <h2 class="section-title fade-in">Snacks</h2>
+  <div class="menu-grid">
+    <div class="card fade-in delay-1">
+      <img src="PIC (2).png" alt="snack" />
+      <h3>Chicken Burger</h3>
+      <p>NGN 1500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="PIC (3).png" alt="snack" />
+      <h3>Chicken Wings</h3>
+      <p>NGN 800</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="shawarma_PNG34.png" alt="snack" />
+      <h3>Shawarma</h3>
+      <p>NGN 800</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="piza.png" alt="snack" />
+      <h3>Piza</h3>
+      <p>NGN 800</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="panc.png" alt="snack" />
+      <h3>Honey Pancake</h3>
+      <p>NGN 800</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="pizz.png" alt="snack" />
+      <h3>Chicken Pizza</h3>
+      <p>NGN 800</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+  </div>
+</section>
 
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
+<section id="drinks" class="menu">
+  <h2 class="section-title fade-in">Drinks</h2>
+  <div class="menu-grid">
+    <div class="card fade-in delay-1">
+      <img src="smoth.png" alt="drink" />
+      <h3>Smoothie</h3>
+      <p>NGN 500</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="yogurt_PNG15178.png" alt="drink" />
+      <h3>yogurt</h3>
+      <p>NGN 600</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="morning-yogurt-parfait-png-05212024-f7nqh3c8bl6zudur.png" alt="drink" />
+      <h3>Fresh yogurt</h3>
+      <p>NGN 600</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="Juice-PNG-Image-Free-Download.png" alt="drink" />
+      <h3>Orange Juice</h3>
+      <p>NGN 600</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="Cocktail-Drink-PNG-Free-Image.png" alt="drink" />
+      <h3>Cocktail</h3>
+      <p>NGN 600</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+    <div class="card fade-in delay-1">
+      <img src="zobo-180x180.png" alt="drink" />
+      <h3>Fresh Zobo</h3>
+      <p>NGN 600</p>
+      <a href="tel:09019067034" class="btn">Call to Order</a>
+    </div>
+  </div>
+</section>
 
-    if (response.ok) {
-      messageEl.textContent = "✅ Thanks! Your message has been sent.";
-      messageEl.style.color = "green";
-      form.reset();
-    } else {
-      messageEl.textContent = "❌ Oops! Something went wrong. Please try again.";
-      messageEl.style.color = "red";
-    }
-  });
-</script>
+
+
+<section class="about fade-left">
+  <h2>About Us</h2>
+  <p>
+    Kay's Kitchen is a top-rated culinary destination in Ilorin city.
+    <a href="index copy 2.html">Read More</a>
+  </p>
+</section>
+
+<section class="reviews" id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review-list" id="review-list">
+   
+  </div>
+
+  <div class="review-form">
+    <h3>Leave a Review</h3>
+    <input type="text" id="review-name" placeholder="Your Name">
+    <textarea id="review-text" placeholder="Your Comment"></textarea>
+    <button style="padding: 10px 20px; background: #ff6347; color: #fff; border: none; border-radius: 25px; cursor: pointer; transition: 0.3s;" id="add-review">Send Message</button>
+  </div>
+</section>
+
+
+
+
+<section class="news fade-right">
+  <p>
+    Stay tuned for exciting updates – new dishes, cocktails, and much more!
+  </p>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-branches">
+      <h4>Branches</h4>
+      <p>Lagos</p>
+      <p>Abuja</p>
+      <p>Kwara</p>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2025 Kay's Kitchen. All rights reserved.</p>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
