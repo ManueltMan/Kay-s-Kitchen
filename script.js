@@ -1,74 +1,113 @@
+(function () {
+  'use strict';
 
+  var root = document.documentElement;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Mobile navigation ---------- */
+  var toggle = document.querySelector('.hamburger');
+  var navLinks = document.getElementById('nav-links');
 
+  if (toggle && navLinks) {
+    var setMenu = function (open) {
+      navLinks.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
 
-document.querySelectorAll('.dropdown-content a, .sidebar-dropdown-content a').forEach(link => {
-  link.addEventListener('click', e => {
-    if (link.getAttribute('href').startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+    toggle.addEventListener('click', function () {
+      setMenu(!navLinks.classList.contains('open'));
+    });
 
+    // Close the menu after tapping a link
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
+    });
 
-
-
-const reviewList = document.getElementById('review-list');
-const addReviewBtn = document.getElementById('add-review');
-
-addReviewBtn.addEventListener('click', () => {
-  const nameInput = document.getElementById('review-name');
-  const textInput = document.getElementById('review-text');
-
-  const name = nameInput.value.trim();
-  const comment = textInput.value.trim();
-
-  if (name === '' || comment === '') {
-    alert('Please enter both name and comment!');
-    return;
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setMenu(false);
+    });
   }
 
+  /* ---------- Rotating slides (hero on home, photos on about) ---------- */
+  function rotate(items, interval) {
+    if (items.length < 2 || reduceMotion) return;
+    var current = 0;
+    setInterval(function () {
+      items[current].classList.remove('active');
+      current = (current + 1) % items.length;
+      items[current].classList.add('active');
+    }, interval);
+  }
 
-  const reviewItem = document.createElement('div');
-  reviewItem.classList.add('review-item');
+  rotate(document.querySelectorAll('.slide'), 3000);
+  rotate(document.querySelectorAll('.about-slides img'), 3000);
 
-  reviewItem.innerHTML = `
-    <h4>${name}</h4>
-    <p>${comment}</p>
-  `;
+  /* ---------- Customer reviews (home page only) ---------- */
+  var form = document.getElementById('review-form');
 
- 
-  reviewList.prepend(reviewItem);
+  if (form) {
+    var list = document.getElementById('review-list');
+    var status = document.getElementById('review-status');
+    var nameInput = document.getElementById('review-name');
+    var textInput = document.getElementById('review-text');
 
+    var setStatus = function (message, type) {
+      status.textContent = message;
+      status.className = 'form-status ' + type;
+    };
 
-  nameInput.value = '';
-  textInput.value = '';
-});
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
+      var name = nameInput.value.trim();
+      var comment = textInput.value.trim();
 
+      if (name === '' || comment === '') {
+        setStatus('Please enter both your name and a comment.', 'error');
+        return;
+      }
 
-const slides = document.querySelectorAll('.slide');
-let currentIndex = 0;
+      // textContent (not innerHTML) so visitors can't inject HTML or scripts
+      var item = document.createElement('div');
+      item.className = 'review-item';
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if(i === index) slide.classList.add('active');
-  });
-}
+      var heading = document.createElement('h4');
+      heading.textContent = name;
 
-function nextSlide() {
-  currentIndex++;
-  if(currentIndex >= slides.length) currentIndex = 0;
-  showSlide(currentIndex);
-}
+      var body = document.createElement('p');
+      body.textContent = comment;
 
+      item.appendChild(heading);
+      item.appendChild(body);
 
-showSlide(currentIndex);
-setInterval(nextSlide, 3000);
+      var empty = list.querySelector('.review-empty');
+      if (empty) empty.remove();
 
+      list.prepend(item);
+      form.reset();
+      setStatus('Thank you for your review!', 'success');
+    });
+  }
 
+  /* ---------- Scroll reveal ---------- */
+  var targets = document.querySelectorAll('.fade-in, .fade-left, .fade-right');
 
+  if ('IntersectionObserver' in window && !reduceMotion && targets.length) {
+    root.classList.add('js');
 
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    targets.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ---------- Footer year ---------- */
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+})();
