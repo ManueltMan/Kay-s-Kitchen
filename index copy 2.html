@@ -1,222 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Kay's Kitchen</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    
-    .nav-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #111;
-      padding: 15px 30px;
-    }
-
-    .navlink {
-      display: flex;
-      gap: 20px;
-    }
-
-    .navlink a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .navlink a:hover {
-      color: gold;
-    }
-
-   
-    .container1 {
-      background: url('header-bg.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 50px 20px;
-      color: white;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.5s ease-out forwards;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-   
-    .headAbt {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      padding: 40px 40px;
-      margin-left: 50px;
-      flex-wrap: wrap;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.5s ease-out forwards;
-      animation-delay: 0.3s;
-    }
-
-    .conAbt {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .conAbt img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: none;
-    }
-
-    .conAbt img.active {
-      display: block;
-    }
-
-    .conAbt h2 {
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    
-    .reviews {
-      padding: 50px 20px;
-      background: #f9f9f9;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.5s ease-out forwards;
-      animation-delay: 1.2s;
-    }
-
-    .reviews h2 {
-      margin-bottom: 30px;
-      font-size: 28px;
-      color: #333;
-    }
-
-    .review-cards {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .review-card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 300px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: left;
-    }
-
-    .review-card p {
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
-    .review-card h4 {
-      margin: 0;
-      color: #555;
-    }
-
-    
-    footer {
-      background: #111;
-      color: white;
-      padding: 30px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: gold;
-    }
-  </style>
+  <meta name="description" content="Learn about Kay's Kitchen: fresh ingredients, expert chefs, and a welcoming atmosphere. Open daily from 11am to 10pm." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  
-  <nav class="nav-bar">
-    <h2 style="color:white;">Kay's <span style="color:gold;">Kitchen</span></h2>
-    <div class="navlink">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav-bar" aria-label="Main">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Kay's <span>Kitchen</span></a>
+
+    <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
-    </div>
-  </nav>
 
- 
-  <div class="container1">
-    <h1>About <span style="color: gold;">Kay's Kitchen</span></h1>
-  </div>
+      <div class="dropdown">
+        <button type="button" class="drop-btn" aria-haspopup="true">Menu ▾</button>
+        <div class="dropdown-content">
+          <a href="index.html#food">Food</a>
+          <a href="index.html#snacks">Snacks</a>
+          <a href="index.html#drinks">Drinks</a>
+        </div>
+      </div>
 
- 
-  <div class="headAbt">
-    <div class="conAbt">
-      <h2>ABOUT US</h2>
-      <p>
-        Kay's Kitchen is a top-rated culinary destination in Nigeria. With a diverse menu featuring classic comfort food and gourmet cuisine, 
-        we cater to every palate. Our expert chefs prepare each dish with the freshest ingredients, ensuring an unforgettable dining experience. 
-        <br><br>
-        Whether you're looking for a casual meal or a romantic evening, our welcoming atmosphere, friendly staff, and delectable dishes 
-        make us the perfect choice. Open daily from 11am to 10pm with both indoor and outdoor dining. 
-      </p>
-    </div>
-    <div class="conAbt">
-     
-      <img src="Jollof-rice-and-chicken.png" alt="Jollof rice" class="active">
-      <img src="—Pngtree—italian chicken pasta_4992938.png" alt="Fried rice">
-      <img src="PIC (2).png" alt="Grilled fish">
+      <a href="about.html" aria-current="page">About</a>
+
+      <a href="tel:+2349019067034" class="btn-call">Call Us</a>
     </div>
   </div>
+</nav>
 
+<main id="main">
 
-  <section class="reviews">
-    <h2>What Our Past Customers Say</h2>
-    <div class="review-cards">
-      <div class="review-card">
-        <p>"The jollof rice and chicken was the best I’ve ever had. Absolutely delicious!"</p>
-        <h4>- Aisha, Lagos</h4>
-      </div>
-      <div class="review-card">
-        <p>"Great ambience, friendly staff, and food that feels like home. Highly recommend!"</p>
-        <h4>- David, Abuja</h4>
-      </div>
-      <div class="review-card">
-        <p>"Affordable prices for gourmet meals. Kay’s Kitchen never disappoints!"</p>
-        <h4>- Grace, Kwara</h4>
-      </div>
-    </div>
-  </section>
+<div class="page-banner">
+  <h1>About <span>Kay's Kitchen</span></h1>
+</div>
 
- 
-  <div class="container3" style="text-align:center; padding:40px;">
+<div class="about-wrap">
+  <div class="about-text fade-in">
+    <h2>About Us</h2>
     <p>
-      Stay tuned — we've got exciting news coming your way: <br>
-      new dishes, cocktails, and much more!
+      Kay's Kitchen is a top-rated culinary destination in Nigeria. With a diverse menu featuring classic comfort food and gourmet cuisine,
+      we cater to every palate. Our expert chefs prepare each dish with the freshest ingredients, ensuring an unforgettable dining experience.
+      <br><br>
+      Whether you're looking for a casual meal or a romantic evening, our welcoming atmosphere, friendly staff, and delectable dishes
+      make us the perfect choice. Open daily from 11am to 10pm with both indoor and outdoor dining.
     </p>
   </div>
+  <div class="about-slides">
+    <img src="Jollof-rice-and-chicken.png" alt="Jollof rice with chicken" class="active">
+    <img src="—Pngtree—italian chicken pasta_4992938.png" alt="Italian chicken pasta">
+    <img src="PIC (2).png" alt="Chicken burger">
+  </div>
+</div>
 
- 
-  <footer>
+<section class="reviews">
+  <h2>What Our Past Customers Say</h2>
+  <div class="review-cards">
+    <div class="review-card">
+      <p>“The jollof rice and chicken was the best I’ve ever had. Absolutely delicious!”</p>
+      <h4>– Aisha, Lagos</h4>
+    </div>
+    <div class="review-card">
+      <p>“Great ambience, friendly staff, and food that feels like home. Highly recommend!”</p>
+      <h4>– David, Abuja</h4>
+    </div>
+    <div class="review-card">
+      <p>“Affordable prices for gourmet meals. Kay’s Kitchen never disappoints!”</p>
+      <h4>– Grace, Kwara</h4>
+    </div>
+  </div>
+</section>
+
+<section class="news fade-right">
+  <p>
+    Stay tuned — we've got exciting news coming your way:<br>
+    new dishes, cocktails, and much more!
+  </p>
+</section>
+
+</main>
+
+<footer>
   <div class="footer-container">
     <div class="footer-brand">
       <h3>Kay's <span>Kitchen</span></h3>
@@ -224,16 +100,9 @@
     </div>
     <div class="footer-links">
       <h4>Quick Links</h4>
-      <a href="#">Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Menu</a>
-      <a href="#">About Us</a>
-    </div>
-    <div class="footer-support">
-      <h4>Support</h4>
-      <a href="#">Help</a>
-      <a href="#">Contact Us</a>
-      <a href="#">FAQs</a>
+      <a href="index.html#food">Menu</a>
+      <a href="about.html">About Us</a>
+      <a href="tel:+2349019067034">Contact Us</a>
     </div>
     <div class="footer-branches">
       <h4>Branches</h4>
@@ -242,21 +111,9 @@
       <p>Kwara</p>
     </div>
   </div>
-  <p class="footer-bottom">&copy; 2025 Kay's Kitchen. All rights reserved.</p>
+  <p class="footer-bottom">&copy; <span id="year">2026</span> Kay's Kitchen. All rights reserved.</p>
 </footer>
 
-
- 
-  <script>
-    const slides = document.querySelectorAll(".conAbt img");
-    let index = 0;
-
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 3000);
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
