@@ -107,7 +107,7 @@
     targets.forEach(function (el) { observer.observe(el); });
   }
 
-  /* ---------- Footer year ---------- */
-  var year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
+  // /* ---------- Footer year ---------- */
+  // var year = document.getElementById('year');
+  // if (year) year.textContent = new Date().getFullYear();
 })();
